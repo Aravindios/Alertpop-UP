@@ -16,7 +16,6 @@
 		37845A7E1D994D87009B3734 /* AlertChildPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37845A7D1D994D87009B3734 /* AlertChildPageViewController.swift */; };
 		37845A801D994DA6009B3734 /* AlertPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37845A7F1D994DA6009B3734 /* AlertPageViewController.swift */; };
 		37845A821D994DE6009B3734 /* AlertChildPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37845A811D994DE6009B3734 /* AlertChildPageViewController.xib */; };
-		75789DE99D4C4483EF7ED1EC /* Pods_AlertOnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794BF667DC23DC451EA3CAB /* Pods_AlertOnboarding.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +30,6 @@
 		37845A7D1D994D87009B3734 /* AlertChildPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertChildPageViewController.swift; sourceTree = "<group>"; };
 		37845A7F1D994DA6009B3734 /* AlertPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPageViewController.swift; sourceTree = "<group>"; };
 		37845A811D994DE6009B3734 /* AlertChildPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertChildPageViewController.xib; sourceTree = "<group>"; };
-		9794BF667DC23DC451EA3CAB /* Pods_AlertOnboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlertOnboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B970D78C42842AD0B0CFEADD /* Pods-AlertOnboarding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlertOnboarding.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlertOnboarding/Pods-AlertOnboarding.release.xcconfig"; sourceTree = "<group>"; };
-		C6C588FD0340763038B42B84 /* Pods-AlertOnboarding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlertOnboarding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlertOnboarding/Pods-AlertOnboarding.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +37,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75789DE99D4C4483EF7ED1EC /* Pods_AlertOnboarding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,8 +48,6 @@
 			children = (
 				37845A671D994CBA009B3734 /* AlertOnboarding */,
 				37845A661D994CBA009B3734 /* Products */,
-				C275C13C4D0CC087D2509773 /* Pods */,
-				4B3303F6757A8998B17305E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,23 +84,6 @@
 			name = Alert;
 			sourceTree = "<group>";
 		};
-		4B3303F6757A8998B17305E5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9794BF667DC23DC451EA3CAB /* Pods_AlertOnboarding.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C275C13C4D0CC087D2509773 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C6C588FD0340763038B42B84 /* Pods-AlertOnboarding.debug.xcconfig */,
-				B970D78C42842AD0B0CFEADD /* Pods-AlertOnboarding.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,7 +91,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37845A771D994CBA009B3734 /* Build configuration list for PBXNativeTarget "AlertOnboarding" */;
 			buildPhases = (
-				4942ECFF63AF17F66BAD4AF0 /* [CP] Check Pods Manifest.lock */,
 				37845A611D994CBA009B3734 /* Sources */,
 				37845A621D994CBA009B3734 /* Frameworks */,
 				37845A631D994CBA009B3734 /* Resources */,
@@ -177,27 +152,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		4942ECFF63AF17F66BAD4AF0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AlertOnboarding-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		37845A611D994CBA009B3734 /* Sources */ = {
@@ -331,29 +285,31 @@
 		};
 		37845A781D994CBA009B3734 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6C588FD0340763038B42B84 /* Pods-AlertOnboarding.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = A79T4B24DZ;
 				INFOPLIST_FILE = AlertOnboarding/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cogz.AlertOnboarding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		37845A791D994CBA009B3734 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B970D78C42842AD0B0CFEADD /* Pods-AlertOnboarding.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = A79T4B24DZ;
 				INFOPLIST_FILE = AlertOnboarding/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cogz.AlertOnboarding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
