@@ -20,7 +20,7 @@ node {
             sh "brew cask install fastlane"
      sh "export LC_ALL=en_US.UTF-8"
       sh "export LANG=en_US.UTF-8"   
-    sh "fastlane beta" 
+  //  sh "fastlane beta" 
   //  sh "fastlane scan"   
 // sh "bundle exec fastlane gym"
 
