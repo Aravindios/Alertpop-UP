@@ -17,7 +17,11 @@ node {
                 url: 'https://github.com/VarunRaj94/hannatest.git/'
             ]]
         ])
-    sh "fastlane scan"   
+            sh "brew cask install fastlane"
+     sh "export LC_ALL=en_US.UTF-8"
+      sh "export LANG=en_US.UTF-8"   
+    sh "fastlane init" 
+  //  sh "fastlane scan"   
 // sh "bundle exec fastlane gym"
 
     }
