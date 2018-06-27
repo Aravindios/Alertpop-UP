@@ -24,11 +24,11 @@ node {
    //  sh "fastlane init"   
    //  sh "fastlane beta"
         
-    sh    'sonar-scanner \
+    sh    "sonar-scanner \
   -Dsonar.projectKey=Alertpop-UP \
   -Dsonar.sources=. \
   -Dsonar.host.url=http://localhost:6363 \
-  -Dsonar.login=02933fa7063af5473698c298c014cc3b4b50f9f4'
+  -Dsonar.login=02933fa7063af5473698c298c014cc3b4b50f9f4"
         
         
 
