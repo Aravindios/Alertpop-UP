@@ -26,19 +26,7 @@ node {
         
  //   sh 'sonar-scanner -Dsonar.projectKey=Alertpop-UP -Dsonar.sources=. -Dsonar.host.url=http://localhost:6363 -Dsonar.login=02933fa7063af5473698c298c014cc3b4b50f9f4'
         
-         stage('SonarQube analysis') { 
-        withSonarQubeEnv('Sonar') { 
-          sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.3.0.603:sonar ' + 
-          '-f all/pom.xml ' +
-          '-Dsonar.projectKey=Alertpop-UP ' +
-          '-Dsonar.login=$admin ' +
-          '-Dsonar.password=$admin ' +
-          '-Dsonar.sources=. ' +
-          '-Dsonar.tests=. ' +
-          '-Dsonar.test.inclusions=**/*Test*/** ' +
-          '-Dsonar.exclusions=**/*Test*/**'
-        }
-    }
+         sh 'sonar-scanner'
 
     }
 }
