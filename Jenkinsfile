@@ -4,7 +4,7 @@ env.USER = 'iosbuilds'
 // backwards compat with old branch variable
 env.GIT_BRANCH = env.BRANCH_NAME
 
-node {
+node('Mac mini') {
     stage('Checkout/Build/Test') {
         // Checkout files.
         checkout([
