@@ -18,6 +18,7 @@ default_platform(:ios)
 platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
+    enable_automatic_code_signing(path: "AlertOnboarding.xcodeproj")
       gym(scheme: 'AlertOnboarding', export_method: 'app-store')
     build_app(scheme: "AlertOnboarding")
 increment_build_number(
