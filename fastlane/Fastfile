@@ -25,6 +25,9 @@ increment_build_number(
     build_number: latest_testflight_build_number + 1,
     xcodeproj: "AlertOnboarding.xcodeproj"
   )
+     commit_version_bump(
+     xcodeproj:"AlertOnboarding.xcodeproj"
+   )
     upload_to_testflight
   end
 lane :metrics do
