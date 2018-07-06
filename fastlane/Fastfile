@@ -26,7 +26,8 @@ increment_build_number(
     xcodeproj: "AlertOnboarding.xcodeproj"
   )
  
-    upload_to_testflight
+     upload_to_testflight(changelog: "Add rocket emoji")
+     upload_to_testflight(skip_waiting_for_build_processing: true)
   end
 lane :metrics do
     scan(scheme: "AlertOnboarding", code_coverage: true, derived_data_path: "./DerivedData", output_directory: "./reports")
