@@ -1,1 +1,31 @@
-[]
+[
+  {
+    "repo_config": {
+      "id": "9567a178-4e81-4c9e-8f93-01dd96e4b66b",
+      "git_url": "https://github.com/Aravindios/Alertpop-UP",
+      "description": "Pop Up view",
+      "provider_credential_type_needed": "github",
+      "name": "Alertpop-UP",
+      "hidden": false,
+      "full_name": "Aravindios/Alertpop-UP"
+    },
+    "enabled": true,
+    "project_name": "Aravindios/Alertpop-UP",
+    "id": "b97763ec-c689-4e90-bb48-9324f51babe0",
+    "platform": "ios",
+    "lane": "beta",
+    "artifact_provider": {
+      "class_name": "FastlaneCI::LocalArtifactProvider"
+    },
+    "job_triggers": [
+      {
+        "type": "manual",
+        "branch": "master"
+      },
+      {
+        "type": "commit",
+        "branch": "master"
+      }
+    ]
+  }
+]
