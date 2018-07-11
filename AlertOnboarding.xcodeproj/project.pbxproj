@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18033B1E20F6076500D2071C /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18033B1C20F6076400D2071C /* Fabric.framework */; };
+		18033B1F20F6076500D2071C /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18033B1D20F6076500D2071C /* Crashlytics.framework */; };
 		37845A691D994CBA009B3734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37845A681D994CBA009B3734 /* AppDelegate.swift */; };
 		37845A6B1D994CBA009B3734 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37845A6A1D994CBA009B3734 /* ViewController.swift */; };
 		37845A6E1D994CBA009B3734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37845A6C1D994CBA009B3734 /* Main.storyboard */; };
@@ -19,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18033B1C20F6076400D2071C /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
+		18033B1D20F6076500D2071C /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
+		18839A3D20ECAABC00928EE2 /* AlertOnboarding.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlertOnboarding.entitlements; sourceTree = "<group>"; };
 		37845A651D994CBA009B3734 /* AlertOnboarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlertOnboarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37845A681D994CBA009B3734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37845A6A1D994CBA009B3734 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18033B1F20F6076500D2071C /* Crashlytics.framework in Frameworks */,
+				18033B1E20F6076500D2071C /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +69,7 @@
 		37845A671D994CBA009B3734 /* AlertOnboarding */ = {
 			isa = PBXGroup;
 			children = (
+				18839A3D20ECAABC00928EE2 /* AlertOnboarding.entitlements */,
 				37845A7A1D994D51009B3734 /* Alert */,
 				37845A681D994CBA009B3734 /* AppDelegate.swift */,
 				37845A6A1D994CBA009B3734 /* ViewController.swift */,
@@ -70,6 +78,8 @@
 				37845A711D994CBA009B3734 /* LaunchScreen.storyboard */,
 				37845A741D994CBA009B3734 /* Info.plist */,
 				37845A811D994DE6009B3734 /* AlertChildPageViewController.xib */,
+				18033B1D20F6076500D2071C /* Crashlytics.framework */,
+				18033B1C20F6076400D2071C /* Fabric.framework */,
 			);
 			path = AlertOnboarding;
 			sourceTree = "<group>";
@@ -94,6 +104,7 @@
 				37845A611D994CBA009B3734 /* Sources */,
 				37845A621D994CBA009B3734 /* Frameworks */,
 				37845A631D994CBA009B3734 /* Resources */,
+				18033B1B20F6073200D2071C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -118,6 +129,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = A79T4B24DZ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -152,6 +168,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18033B1B20F6073200D2071C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 6baee5125152c8e8f9b7dfa6c862a10005578358 4b1b1bd7cdf9bfbca6c0e2b2433f5e18461f9f4933526f45153ebf762ff69cbe";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		37845A611D994CBA009B3734 /* Sources */ = {
@@ -287,8 +319,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 7;
+				CODE_SIGN_ENTITLEMENTS = AlertOnboarding/AlertOnboarding.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = A79T4B24DZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = AlertOnboarding/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cogz.AlertOnboarding;
@@ -302,8 +340,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 7;
+				CODE_SIGN_ENTITLEMENTS = AlertOnboarding/AlertOnboarding.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = A79T4B24DZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = AlertOnboarding/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cogz.AlertOnboarding;
