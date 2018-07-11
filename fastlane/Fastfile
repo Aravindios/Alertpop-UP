@@ -19,7 +19,7 @@ platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
      # Before calling match, we make sure all our devices are registered on the Apple Developer Portal
-  register_devices(devices_file: "1c0d34d557c3bbfa4d3a6572aaed296f0c20f619")
+  register_devices(devices_file: 1c0d34d557c3bbfa4d3a6572aaed296f0c20f619)
 
   # After registering the new devices, we'll make sure to update the provisioning profile if necessary
   # Note how we make sure to pass "adhoc" to get and use a provisioning profile for Ad Hoc distribution
