@@ -26,7 +26,7 @@ platform :ios do
  # sync_code_signing(force_for_new_devices: true, type: "adhoc")
   build_app(export_method: "ad-hoc")
 cert
- sigh(export_method: "ad-hoc", force: true)
+ sigh(ad-hoc, force: true)
   crashlytics(emails: "productscog@gmail.com”,
 api_token: "6baee5125152c8e8f9b7dfa6c862a10005578358",
               build_secret: "4b1b1bd7cdf9bfbca6c0e2b2433f5e18461f9f4933526f45153ebf762ff69cbe")
