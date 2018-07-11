@@ -18,16 +18,16 @@ default_platform(:ios)
 platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
-    enable_automatic_code_signing(path: "AlertOnboarding.xcodeproj")
-      gym(scheme: 'AlertOnboarding', export_method: 'app-store')
-    build_app(scheme: "AlertOnboarding")
-increment_build_number(
-    build_number: latest_testflight_build_number + 1,
-    xcodeproj: "AlertOnboarding.xcodeproj"
-  )
- 
-     upload_to_testflight(changelog: "Add rocket emoji")
-     upload_to_testflight(skip_waiting_for_build_processing: true)
+#    enable_automatic_code_signing(path: "AlertOnboarding.xcodeproj")
+#      gym(scheme: 'AlertOnboarding', export_method: 'app-store')
+   # build_app(scheme: "AlertOnboarding")
+#increment_build_number(
+#    build_number: latest_testflight_build_number + 1,
+ #   xcodeproj: "AlertOnboarding.xcodeproj"
+  #)
+ sigh
+    # upload_to_testflight(changelog: "Add rocket emoji")
+   #  upload_to_testflight(skip_waiting_for_build_processing: true)
   end
 lane :metrics do
     scan(scheme: "AlertOnboarding", code_coverage: true, derived_data_path: "./DerivedData", output_directory: "./reports")
