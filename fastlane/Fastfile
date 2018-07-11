@@ -19,7 +19,7 @@ platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
     build_app(scheme: "AlertOnboarding",
-            include_bitcode: true)
+            include_bitcode: false)
 cert
  sigh(force: true)
   crashlytics(emails: "productscog@gmail.com”,
