@@ -28,7 +28,7 @@ platform :ios do
     use_legacy_build_api=true
     app_identifier = 'com.cogz.AlertOnboarding'
    # build_app(export_method: "ad-hoc")
-    build_app(export_method: 'enterprise')
+    build_app(export_method: 'enterprise', export_xcargs: "-allowProvisioningUpdates")
 cert
  # sigh(ad-hoc, force: true)
     get_provisioning_profile(
