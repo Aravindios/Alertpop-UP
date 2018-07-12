@@ -24,7 +24,8 @@ platform :ios do
   # After registering the new devices, we'll make sure to update the provisioning profile if necessary
   # Note how we make sure to pass "adhoc" to get and use a provisioning profile for Ad Hoc distribution
  # sync_code_signing(force_for_new_devices: true, type: "adhoc")
-  build_app(export_method: "ad-hoc")
+ use_legacy_build_api
+    build_app(export_method: "ad-hoc")
 cert
  # sigh(ad-hoc, force: true)
     get_provisioning_profile(
